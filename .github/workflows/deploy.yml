@@ -14,7 +14,7 @@ jobs:
       - name: Kiem tra file index.html ton tai (buoc Build/Test)
         run: |
           test -f site/index.html && echo "OK: index.html ton tai"
-          grep -q VU_QUANG_ANH site/index.html && echo "CANH BAO: chua thay ten!" && exit 1 || echo "OK: da dien thong tin ca nhan"
+          grep -q "THAY_TEN_BAN" site/index.html && echo "CANH BAO: chua thay ten!" && exit 1 || echo "OK: da dien thong tin ca nhan"
 
       - name: Cau hinh AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
